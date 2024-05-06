@@ -3,6 +3,8 @@
 # AMD Drivers & ROCm on Ubuntu
 # Update system
 sudo apt update -y && sudo apt full-upgrade -y
+sudo apt-get install wget -y
+sudo apt-get install git -y
 # Based on https://phazertech.com/tutorials/rocm.html
 # Follow phazertech on Youtube https://phazertech.com/youtube.html
 # Here are the new official instructions for installing the AMD drivers using the package manager. 

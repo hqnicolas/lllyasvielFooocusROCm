@@ -31,6 +31,7 @@ pip install torch==2.1.2+rocm5.6 torchvision==0.16.2+rocm5.6 --extra-index-url h
 ```
 - Start Fooocus
 ```
+cd Fooocus
 export HSA_OVERRIDE_GFX_VERSION=11.0.0
 source fooocus_env/bin/activate
 python entry_with_update.py --listen --attention-split

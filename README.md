@@ -18,7 +18,7 @@ wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/inst
 sudo chmod install_python.sh
 sudo ./install_python.sh
 ```
-- Install lllyasviel/Fooocus
+- Install and Start lllyasviel/Fooocus
 ```
 git clone --branch 2.2.1 https://github.com/lllyasviel/Fooocus.git
 cd Fooocus

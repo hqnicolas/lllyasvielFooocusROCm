@@ -24,12 +24,10 @@ git clone --branch 2.2.1 https://github.com/lllyasviel/Fooocus.git
 cd Fooocus
 source fooocus_env/bin/activate
 pip3 install -r requirements_versions.txt
+pip3 install torch==2.1.2+rocm5.6 torchvision==0.16.2+rocm5.6 --extra-index-url https://download.pytorch.org/whl/rocm5.6
+python entry_with_update.py --listen --attention-split
 ```
-- Run this pip Install torch
-```
-pip install torch==2.1.2+rocm5.6 torchvision==0.16.2+rocm5.6 --extra-index-url https://download.pytorch.org/whl/rocm5.6
-```
-- Start Fooocus
+- Restart Fooocus
 ```
 cd Fooocus
 export HSA_OVERRIDE_GFX_VERSION=11.0.0

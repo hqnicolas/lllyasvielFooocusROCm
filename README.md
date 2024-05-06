@@ -11,7 +11,7 @@ sudo ./prepare.sh
 ```
 - install AMD ROCm Drivers
 ```
-wget https://github.com/hqnicolas/lllyasvielFooocusROCm/blob/main/AMD-ROCm-Drivers/7800install.sh
+wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/AMD-ROCm-Drivers/7800install.sh
 sudo chmod 7800install.sh
 sudo ./7800install.sh
 ```

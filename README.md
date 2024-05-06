@@ -1,4 +1,4 @@
-# 💬 lllyasviel Fooocus on AMD ROCm 📷
+# 💬 [lllyasviel Fooocus](https://github.com/lllyasviel/Fooocus) on AMD ROCm 📷
 - Make sure that your system was fresh (ubuntu 22.04)
 - Prepare AMD ROCm Driver install
 ```

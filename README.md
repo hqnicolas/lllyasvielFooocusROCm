@@ -2,9 +2,6 @@
 - Make sure that your system was fresh (ubuntu 22.04)
 - Prepare AMD ROCm Driver install
 ```
-sudo apt-get update
-sudo apt-get install wget
-sudo apt-get install git
 wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/AMD-ROCm-Drivers/prepare.sh
 sudo chmod 777 prepare.sh
 sudo ./prepare.sh

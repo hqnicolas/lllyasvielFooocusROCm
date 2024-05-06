@@ -1,20 +1,23 @@
-# 💬 Stable Diffusion Radeon ROCm 📷
+# 💬 Runing lllyasviel Fooocus on AMD ROCm 📷
 - Make sure that your system was fresh (ubuntu 22.04)
 - Prepare AMD ROCm Driver install
 ```
-wget https://raw.githubusercontent.com/hqnicolas/StableDiffusionROCm/main/AMD-ROCm-Drivers/prepare.sh
+sudo apt-get update
+sudo apt-get install wget
+sudo apt-get install git
+wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/AMD-ROCm-Drivers/prepare.sh
 sudo chmod 777 prepare.sh
 sudo ./prepare.sh
 ```
 - install AMD ROCm Drivers
 ```
-wget https://raw.githubusercontent.com/hqnicolas/StableDiffusionROCm/main/AMD-ROCm-Drivers/7800install.sh
+wget https://github.com/hqnicolas/lllyasvielFooocusROCm/blob/main/AMD-ROCm-Drivers/7800install.sh
 sudo chmod 7800install.sh
 sudo ./7800install.sh
 ```
 - install Docker
 ```
-wget https://raw.githubusercontent.com/hqnicolas/StableDiffusionROCm/main/docker.sh
+wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/docker.sh
 sudo chmod docker.sh
 sudo ./docker.sh
 ```
@@ -23,19 +26,22 @@ sudo ./docker.sh
  sudo apt-get update
  sudo apt-get install docker-compose-plugin
 ```
-- Install Stable Diffusion ROCm
+- Install lllyasviel/Fooocus
 ```
-git clone https://github.com/hqnicolas/StableDiffusionROCm/tree/main
-cd StableDiffusionROCm
-sudo docker-compose build stablediff-rocm
+git clone --branch 2.2.1 https://github.com/lllyasviel/Fooocus.git
+cd Fooocus
+source fooocus_env/bin/activate
+pip3 install -r requirements_versions.txt
 ```
-- Start Stable Diffusion ROCm
+- Run this pip Install torch
 ```
-sudo docker start -a stablediff-rocm-runner
+pip install torch==2.1.2+rocm5.6 torchvision==0.16.2+rocm5.6 --extra-index-url https://download.pytorch.org/whl/rocm5.6
 ```
-- Stop Stable Diffusion ROCm
+- Start Fooocus
 ```
-sudo docker stop stablediff-rocm-runner
+export HSA_OVERRIDE_GFX_VERSION=11.0.0
+source fooocus_env/bin/activate
+python entry_with_update.py --listen --attention-split
 ```
 To see a prompt from your GPU usage.
 ```

@@ -12,6 +12,12 @@ wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/AMD-
 sudo chmod 7800install.sh
 sudo ./7800install.sh
 ```
+- install Python
+```
+wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/install_python.sh
+sudo chmod install_python.sh
+sudo ./install_python.sh
+```
 - Install lllyasviel/Fooocus
 ```
 git clone --branch 2.2.1 https://github.com/lllyasviel/Fooocus.git

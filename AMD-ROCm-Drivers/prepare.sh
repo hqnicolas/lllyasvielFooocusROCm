@@ -18,5 +18,5 @@ echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.
 sudo apt update
 echo -e 'Package: *\nPin: release o=repo.radeon.com\nPin-Priority: 600' | sudo tee /etc/apt/preferences.d/rocm-pin-600
 # Install the kernel mode driver and reboot the system:
-sudo apt install amdgpu-dkms
+sudo apt install amdgpu-dkms -y
 sudo reboot now

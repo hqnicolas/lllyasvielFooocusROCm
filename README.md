@@ -9,13 +9,13 @@ sudo ./prepare.sh
 - install AMD ROCm Drivers
 ```
 wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/AMD-ROCm-Drivers/7800install.sh
-sudo chmod 7800install.sh
+sudo chmod 777 7800install.sh
 sudo ./7800install.sh
 ```
 - install Python
 ```
 wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/install_python.sh
-sudo chmod install_python.sh
+sudo chmod 777 install_python.sh
 sudo ./install_python.sh
 ```
 - Install and Start lllyasviel/Fooocus

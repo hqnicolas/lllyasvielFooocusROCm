@@ -6,6 +6,7 @@ wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/AMD-
 sudo chmod 777 prepare.sh
 sudo ./prepare.sh
 ```
+- Select files 6800 or 7800 to your Chip Generation
 - install AMD ROCm Drivers
 ```
 wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/AMD-ROCm-Drivers/7800install.sh

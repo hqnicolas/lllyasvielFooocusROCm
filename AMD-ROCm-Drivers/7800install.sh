@@ -16,7 +16,7 @@ sudo tee --append /etc/ld.so.conf.d/rocm.conf <<EOF
 EOF
 sudo ldconfig
 # Add binary paths to the PATH environment variable:
-export PATH=$PATH:/opt/rocm-6.0.2/bin:/opt/rocm-5.7/opencl/bin
+echo PATH=$PATH:/opt/rocm-6.0.2/bin:/opt/rocm-5.7/opencl/bin
 # Other Requirements
 # Most systems will likely need to do these additional steps. First add your user to the video and render group:
 sudo usermod -a -G video $LOGNAME

@@ -1,12 +1,13 @@
 #!/bin/bash
 sudo apt update -y
+sudo apt autoremove -y
 for ver in 6.0.1 6.0.2; do
 echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/rocm/apt/$ver jammy main" | sudo tee --append /etc/apt/sources.list.d/rocm.list
 done
 echo -e 'Package: *\nPin: release o=repo.radeon.com\nPin-Priority: 600' | sudo tee /etc/apt/preferences.d/rocm-pin-600
 sudo apt update -y
 # Install ROCm packages:
-sudo apt install rocm-hip-sdk
+sudo apt install rocm-hip-sdk -y
 # Post-install Actions
 # Instruct the system linker where to find the shared objects for ROCm applications:
 sudo tee --append /etc/ld.so.conf.d/rocm.conf <<EOF

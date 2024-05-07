@@ -12,6 +12,11 @@ wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/AMD-
 sudo chmod 777 7800install.sh
 sudo ./7800install.sh
 ```
+- Add your user to video and render
+```
+sudo usermod -a -G video $LOGNAME
+sudo usermod -a -G render $LOGNAME
+```
 - install Python
 ```
 wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/install_python.sh

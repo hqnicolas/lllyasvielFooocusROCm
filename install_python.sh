@@ -7,3 +7,5 @@ rm -rf ~/miniconda3/miniconda.sh
 sudo apt install python3 -y
 sudo apt-get install python-is-python3 -y
 sudo apt install python3.11-venv -y
+sudo apt-get install git -y
+sudo apt-get install wget -y

@@ -2,21 +2,18 @@
 - Make sure that your system was fresh (ubuntu 22.04)
 - Prepare AMD ROCm Driver install
 ```
-wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/AMD-ROCm-Drivers/prepare.sh
+sudo usermod -a -G render,video $LOGNAME
+wget https://raw.githubusercontent.com/hqnicolas/StableDiffusionROCm/main/AMD-ROCm-Drivers/prepare.sh
 sudo chmod 777 prepare.sh
 sudo ./prepare.sh
 ```
-- Select files 6800 or 7800 to your Chip Generation
-- install AMD ROCm Drivers
+- For RDNA and RDNA 2 cards RX5000 RX6000:
 ```
-wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/AMD-ROCm-Drivers/7800install.sh
-sudo chmod 777 7800install.sh
-sudo ./7800install.sh
+export HSA_OVERRIDE_GFX_VERSION=10.3.0
 ```
-- Add your user to video and render
+- For RDNA 3 cards RX7000:
 ```
-sudo usermod -a -G video $LOGNAME
-sudo usermod -a -G render $LOGNAME
+export HSA_OVERRIDE_GFX_VERSION=11.0.0
 ```
 - install Python
 ```

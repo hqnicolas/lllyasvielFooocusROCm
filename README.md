@@ -3,7 +3,7 @@
 - Prepare AMD ROCm Driver install
 ```
 sudo usermod -a -G render,video $LOGNAME
-wget https://raw.githubusercontent.com/hqnicolas/StableDiffusionROCm/main/AMD-ROCm-Drivers/prepare.sh
+wget https://raw.githubusercontent.com/hqnicolas/lllyasvielFooocusROCm/main/AMD-ROCm-Drivers/prepare.sh
 sudo chmod 777 prepare.sh
 sudo ./prepare.sh
 ```

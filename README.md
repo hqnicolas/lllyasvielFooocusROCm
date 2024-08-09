@@ -23,7 +23,7 @@ sudo ./install_python.sh
 ```
 - Install and Start lllyasviel/Fooocus
 ```
-git clone --branch 2.3.1 https://github.com/lllyasviel/Fooocus.git
+git clone --branch v2.5.3 https://github.com/lllyasviel/Fooocus.git
 cd Fooocus
 source fooocus_env/bin/activate
 pip3 install -r requirements_versions.txt

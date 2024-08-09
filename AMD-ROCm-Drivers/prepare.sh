@@ -5,6 +5,7 @@ sudo apt update -y && sudo apt full-upgrade -y
 sudo apt install "linux-headers-$(uname -r)" "linux-modules-extra-$(uname -r)"
 sudo usermod -a -G render,video $LOGNAME
 wget https://repo.radeon.com/amdgpu-install/6.0.2/ubuntu/jammy/amdgpu-install_6.0.60002-1_all.deb
+# to noble numbat 24.04:  wget https://repo.radeon.com/amdgpu-install/6.2/ubuntu/noble/amdgpu-install_6.2.60200-1_all.deb
 # to Ubuntu 20.04: wget https://repo.radeon.com/amdgpu-install/6.0.2/ubuntu/focal/amdgpu-install_6.0.60002-1_all.deb
 # Based on https://phazertech.com/tutorials/rocm.html
 # Follow phazertech on Youtube https://phazertech.com/youtube.html
@@ -19,6 +20,7 @@ wget https://repo.radeon.com/amdgpu-install/6.0.2/ubuntu/jammy/amdgpu-install_6.
 # sudo apt update
 sudo chmod 777 amdgpu-install_6.0.60002-1_all.deb
 sudo apt install ./amdgpu-install_6.0.60002-1_all.deb -y
+# noble numbat 24.04: sudo apt install ./amdgpu-install_6.2.60200-1_all.deb -y
 sudo apt update -y
 # echo -e 'Package: *\nPin: release o=repo.radeon.com\nPin-Priority: 600' | sudo tee /etc/apt/preferences.d/rocm-pin-600
 # Install the kernel mode driver and reboot the system:

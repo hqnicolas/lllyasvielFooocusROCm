@@ -17,6 +17,7 @@ wget https://repo.radeon.com/amdgpu-install/6.0.2/ubuntu/jammy/amdgpu-install_6.
 # ver=6.0.2
 # echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/amdgpu/$ver/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/amdgpu.list
 # sudo apt update
+sudo chmod 777 amdgpu-install_6.0.60002-1_all.deb
 sudo apt install ./amdgpu-install_6.0.60002-1_all.deb
 sudo apt update
 # echo -e 'Package: *\nPin: release o=repo.radeon.com\nPin-Priority: 600' | sudo tee /etc/apt/preferences.d/rocm-pin-600

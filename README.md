@@ -22,12 +22,14 @@ sudo chmod 777 install_python.sh
 sudo ./install_python.sh
 ```
 - Install and Start lllyasviel/Fooocus
+- Use python entry_with_update.py --preset anime or python entry_with_update.py --preset realistic for Fooocus Anime/Realistic Edition.
 ```
 git clone --branch v2.5.3 https://github.com/lllyasviel/Fooocus.git
 cd Fooocus
 source fooocus_env/bin/activate
 pip3 install -r requirements_versions.txt
 pip3 install torch==2.2.1+rocm5.6 torchvision==0.17.1+rocm5.6 --extra-index-url https://download.pytorch.org/whl/rocm5.6
+python entry_with_update.py --preset realistic
 python entry_with_update.py --listen --attention-split
 ```
 - Restart Fooocus
@@ -35,7 +37,9 @@ python entry_with_update.py --listen --attention-split
 cd Fooocus
 export HSA_OVERRIDE_GFX_VERSION=11.0.0
 source fooocus_env/bin/activate
+python entry_with_update.py --preset realistic
 python entry_with_update.py --listen --attention-split
+
 ```
 To see a prompt from your GPU usage.
 ```

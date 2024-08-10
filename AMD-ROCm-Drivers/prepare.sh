@@ -20,6 +20,7 @@ wget https://repo.radeon.com/amdgpu-install/6.0.2/ubuntu/jammy/amdgpu-install_6.
 # sudo apt update
 sudo chmod 777 amdgpu-install_6.0.60002-1_all.deb
 sudo apt install ./amdgpu-install_6.0.60002-1_all.deb -y
+# noble numbat 24.04: sudo chmod 777 amdgpu-install_6.2.60200-1_all.deb 
 # noble numbat 24.04: sudo apt install ./amdgpu-install_6.2.60200-1_all.deb -y
 sudo apt update -y
 # echo -e 'Package: *\nPin: release o=repo.radeon.com\nPin-Priority: 600' | sudo tee /etc/apt/preferences.d/rocm-pin-600
